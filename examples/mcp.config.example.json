@@ -1,0 +1,18 @@
+{
+  "listen": [
+    "0.0.0.0",
+    8652
+  ],
+  "allowed_hosts": [
+    "bridge.example.invalid",
+    "127.0.0.1:8652"
+  ],
+  "ingress_config_path": "/run/bridge/ingress.json",
+  "ingress_url": "http://172.18.0.1:8651/handoffs",
+  "auth": {
+    "issuer": "",
+    "audience": "",
+    "allowed_emails": [],
+    "allowed_subjects": []
+  }
+}

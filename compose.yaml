@@ -1,0 +1,113 @@
+name: hermes-bridge-mcp
+services:
+  hermes-bridge-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: local/hermes-bridge-mcp:0.3.0
+    restart: unless-stopped
+    init: true
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 128
+    mem_limit: 384m
+    cpus: 1.0
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m
+    environment:
+      HERMES_BRIDGE_MCP_CONFIG: /run/bridge/config.json
+      HERMES_BRIDGE_CONTAINERIZED: "1"
+    volumes:
+      - /opt/hermes-bridge/config/mcp/config.json:/run/bridge/config.json:ro
+      - /opt/hermes-bridge/config/mcp/ingress-publication.json:/run/bridge/ingress.json:ro
+      - /opt/hermes-bridge/secrets/utility_api_key:/run/secrets/utility_api_key:ro
+    networks:
+      - edge
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; assert urllib.request.urlopen('http://127.0.0.1:8652/healthz', timeout=2).status == 200"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "3"
+  hermes-bridge-mcp-blue:
+    profiles: ["blue"]
+    image: ${HERMES_BRIDGE_BLUE_IMAGE:-local/hermes-bridge-mcp:0.4.0}
+    restart: unless-stopped
+    init: true
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 128
+    mem_limit: 384m
+    cpus: 1.0
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m
+    environment:
+      HERMES_BRIDGE_MCP_CONFIG: /run/bridge/config.json
+      HERMES_BRIDGE_CONTAINERIZED: "1"
+    volumes:
+      - /opt/hermes-bridge/config/mcp/config.json:/run/bridge/config.json:ro
+      - /opt/hermes-bridge/config/mcp/ingress-publication.json:/run/bridge/ingress.json:ro
+      - /opt/hermes-bridge/secrets/utility_api_key:/run/secrets/utility_api_key:ro
+    networks:
+      - edge
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; assert urllib.request.urlopen('http://127.0.0.1:8652/healthz', timeout=2).status == 200"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "3"
+  hermes-bridge-mcp-green:
+    profiles: ["green"]
+    image: ${HERMES_BRIDGE_GREEN_IMAGE:-local/hermes-bridge-mcp:0.4.0}
+    restart: unless-stopped
+    init: true
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 128
+    mem_limit: 384m
+    cpus: 1.0
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m
+    environment:
+      HERMES_BRIDGE_MCP_CONFIG: /run/bridge/config.json
+      HERMES_BRIDGE_CONTAINERIZED: "1"
+    volumes:
+      - /opt/hermes-bridge/config/mcp/config.json:/run/bridge/config.json:ro
+      - /opt/hermes-bridge/config/mcp/ingress-publication.json:/run/bridge/ingress.json:ro
+      - /opt/hermes-bridge/secrets/utility_api_key:/run/secrets/utility_api_key:ro
+    networks:
+      - edge
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; assert urllib.request.urlopen('http://127.0.0.1:8652/healthz', timeout=2).status == 200"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "3"
+networks:
+  edge:
+    external: true
+    name: hermes-bridge-edge

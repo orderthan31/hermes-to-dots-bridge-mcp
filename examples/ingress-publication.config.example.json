@@ -1,0 +1,13 @@
+{
+  "api_key": "CHANGE_ME",
+  "allowed": {
+    "hyeji": {
+      "home": "CHANGE_ME",
+      "channels": []
+    },
+    "hyerin": {
+      "home": "CHANGE_ME",
+      "channels": []
+    }
+  }
+}

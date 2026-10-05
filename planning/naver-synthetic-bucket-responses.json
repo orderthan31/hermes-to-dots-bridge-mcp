@@ -1,0 +1,314 @@
+[
+  {
+    "fixture_type": "synthetic; never a real API capture",
+    "operation": "naver_keyword_trend",
+    "arguments": {
+      "start_date": "2026-08-05",
+      "end_date": "2026-09-24",
+      "time_unit": "week",
+      "keyword_groups": [
+        {
+          "group_name": "커피",
+          "keywords": [
+            "커피"
+          ]
+        }
+      ]
+    },
+    "request": {
+      "startDate": "2026-08-05",
+      "endDate": "2026-09-24",
+      "timeUnit": "week",
+      "keywordGroups": [
+        {
+          "keywords": [
+            "커피"
+          ],
+          "groupName": "커피"
+        }
+      ]
+    },
+    "synthetic_utility_response": {
+      "cache_hit": true,
+      "relative_values": true,
+      "data": {
+        "startDate": "2026-08-03",
+        "endDate": "2026-09-27",
+        "timeUnit": "week",
+        "results": [
+          {
+            "title": "커피",
+            "data": [
+              {
+                "period": "2026-08-03",
+                "ratio": 50.0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "fixture_type": "synthetic; never a real API capture",
+    "operation": "naver_keyword_trend",
+    "arguments": {
+      "start_date": "2026-08-05",
+      "end_date": "2026-09-24",
+      "time_unit": "month",
+      "keyword_groups": [
+        {
+          "group_name": "커피",
+          "keywords": [
+            "커피"
+          ]
+        }
+      ]
+    },
+    "request": {
+      "startDate": "2026-08-05",
+      "endDate": "2026-09-24",
+      "timeUnit": "month",
+      "keywordGroups": [
+        {
+          "keywords": [
+            "커피"
+          ],
+          "groupName": "커피"
+        }
+      ]
+    },
+    "synthetic_utility_response": {
+      "cache_hit": true,
+      "relative_values": true,
+      "data": {
+        "startDate": "2026-08-01",
+        "endDate": "2026-09-30",
+        "timeUnit": "month",
+        "results": [
+          {
+            "title": "커피",
+            "data": [
+              {
+                "period": "2026-08-01",
+                "ratio": 50.0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "fixture_type": "synthetic; never a real API capture",
+    "operation": "naver_shopping_category_trend",
+    "arguments": {
+      "start_date": "2026-08-05",
+      "end_date": "2026-09-24",
+      "time_unit": "week",
+      "category": [
+        {
+          "name": "식품",
+          "param": [
+            "50000006"
+          ]
+        }
+      ]
+    },
+    "request": {
+      "category": [
+        {
+          "name": "식품",
+          "param": [
+            "50000006"
+          ]
+        }
+      ],
+      "startDate": "2026-08-05",
+      "endDate": "2026-09-24",
+      "timeUnit": "week",
+      "mode": "categories"
+    },
+    "synthetic_utility_response": {
+      "cache_hit": true,
+      "relative_values": true,
+      "data": {
+        "startDate": "2026-08-03",
+        "endDate": "2026-09-27",
+        "timeUnit": "week",
+        "results": [
+          {
+            "title": "커피",
+            "data": [
+              {
+                "period": "2026-08-03",
+                "ratio": 50.0
+              }
+            ]
+          }
+        ]
+      },
+      "mode": "categories"
+    }
+  },
+  {
+    "fixture_type": "synthetic; never a real API capture",
+    "operation": "naver_shopping_category_trend",
+    "arguments": {
+      "start_date": "2026-08-05",
+      "end_date": "2026-09-24",
+      "time_unit": "month",
+      "category": [
+        {
+          "name": "식품",
+          "param": [
+            "50000006"
+          ]
+        }
+      ]
+    },
+    "request": {
+      "category": [
+        {
+          "name": "식품",
+          "param": [
+            "50000006"
+          ]
+        }
+      ],
+      "startDate": "2026-08-05",
+      "endDate": "2026-09-24",
+      "timeUnit": "month",
+      "mode": "categories"
+    },
+    "synthetic_utility_response": {
+      "cache_hit": true,
+      "relative_values": true,
+      "data": {
+        "startDate": "2026-08-01",
+        "endDate": "2026-09-30",
+        "timeUnit": "month",
+        "results": [
+          {
+            "title": "커피",
+            "data": [
+              {
+                "period": "2026-08-01",
+                "ratio": 50.0
+              }
+            ]
+          }
+        ]
+      },
+      "mode": "categories"
+    }
+  },
+  {
+    "fixture_type": "synthetic; never a real API capture",
+    "operation": "naver_shopping_keyword_trend",
+    "arguments": {
+      "start_date": "2026-08-05",
+      "end_date": "2026-09-24",
+      "time_unit": "week",
+      "category": "50000006",
+      "keyword": [
+        {
+          "name": "커피",
+          "param": [
+            "커피"
+          ]
+        }
+      ]
+    },
+    "request": {
+      "category": "50000006",
+      "keyword": [
+        {
+          "name": "커피",
+          "param": [
+            "커피"
+          ]
+        }
+      ],
+      "startDate": "2026-08-05",
+      "endDate": "2026-09-24",
+      "timeUnit": "week",
+      "mode": "keywords"
+    },
+    "synthetic_utility_response": {
+      "cache_hit": true,
+      "relative_values": true,
+      "data": {
+        "startDate": "2026-08-03",
+        "endDate": "2026-09-27",
+        "timeUnit": "week",
+        "results": [
+          {
+            "title": "커피",
+            "data": [
+              {
+                "period": "2026-08-03",
+                "ratio": 50.0
+              }
+            ]
+          }
+        ]
+      },
+      "mode": "keywords"
+    }
+  },
+  {
+    "fixture_type": "synthetic; never a real API capture",
+    "operation": "naver_shopping_keyword_trend",
+    "arguments": {
+      "start_date": "2026-08-05",
+      "end_date": "2026-09-24",
+      "time_unit": "month",
+      "category": "50000006",
+      "keyword": [
+        {
+          "name": "커피",
+          "param": [
+            "커피"
+          ]
+        }
+      ]
+    },
+    "request": {
+      "category": "50000006",
+      "keyword": [
+        {
+          "name": "커피",
+          "param": [
+            "커피"
+          ]
+        }
+      ],
+      "startDate": "2026-08-05",
+      "endDate": "2026-09-24",
+      "timeUnit": "month",
+      "mode": "keywords"
+    },
+    "synthetic_utility_response": {
+      "cache_hit": true,
+      "relative_values": true,
+      "data": {
+        "startDate": "2026-08-01",
+        "endDate": "2026-09-30",
+        "timeUnit": "month",
+        "results": [
+          {
+            "title": "커피",
+            "data": [
+              {
+                "period": "2026-08-01",
+                "ratio": 50.0
+              }
+            ]
+          }
+        ]
+      },
+      "mode": "keywords"
+    }
+  }
+]

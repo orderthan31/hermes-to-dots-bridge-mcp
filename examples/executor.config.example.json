@@ -1,0 +1,28 @@
+{
+  "listen": [
+    "127.0.0.1",
+    8651
+  ],
+  "state_path": "/opt/hermes-bridge/state/events.sqlite3",
+  "api_key": "CHANGE_ME",
+  "allowed": {
+    "hyeji": {
+      "home": "CHANGE_ME",
+      "channels": []
+    },
+    "hyerin": {
+      "home": "CHANGE_ME",
+      "channels": []
+    }
+  },
+  "api_targets": {
+    "hyeji": {
+      "url": "http://127.0.0.1:8662/v1/runs",
+      "env_file": "/root/.hermes/.env"
+    },
+    "hyerin": {
+      "url": "http://127.0.0.1:8663/v1/runs",
+      "env_file": "/root/.hermes/profiles/hyerin/.env"
+    }
+  }
+}
